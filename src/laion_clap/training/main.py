@@ -24,12 +24,12 @@ except ImportError:
     hvd = None
 
 from clap_module import create_model_and_transforms, trace_model, create_model
-from training.data import get_data
-from training.distributed import is_master, init_distributed_device, world_info_from_env
-from training.logger import setup_logging
-from training.params import parse_args
-from training.scheduler import cosine_lr
-from training.train import train_one_epoch, evaluate
+from .data import get_data
+from .distributed import is_master, init_distributed_device, world_info_from_env
+from .logger import setup_logging
+from .params import parse_args
+from .scheduler import cosine_lr
+from .train import train_one_epoch, evaluate
 from clap_module.utils import dataset_split, get_optimizer
 
 
